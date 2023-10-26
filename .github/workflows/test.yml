@@ -1,0 +1,24 @@
+name: Test GHA bug
+
+on:
+  workflow_dispatch:
+
+env:
+  MY_ENV_VAR: 'foo'
+
+jobs:
+  what-works:
+    if: env.MY_ENV_VAR == 'foo'
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - run: |
+          echo "Foo is foo"
+
+  what-doesnt-work:
+    if: startsWith('foobar', env.MY_ENV-VAR)
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - run: |
+          echo "Never get to tell that foobar startsWith foo"
