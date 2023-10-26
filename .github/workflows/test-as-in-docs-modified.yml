@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: "Say Hello Mona it's Monday"
         if: env.DAY_OF_WEEK == 'Monday'
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        run: echo "$Greeting $First_Name. Today is whatever"
         env:
           First_Name: Mona
 
