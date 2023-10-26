@@ -7,6 +7,13 @@ env:
   MY_ENV_VAR: foo
 
 jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        if: env.MY_ENV_VAR == 'foo'
+        run: echo "no-greeting no-name. Today is whatever"
+        
   what-works:
     if: env.MY_ENV_VAR == 'foo'
     runs-on: [ubuntu-latest]
