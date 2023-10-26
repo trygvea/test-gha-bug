@@ -1,4 +1,4 @@
-name: Test GHA example from docs
+name: Modified - Test GHA example from docs
 
 on:
   workflow_dispatch:
