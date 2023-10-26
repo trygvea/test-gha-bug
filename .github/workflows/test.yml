@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  MY_ENV_VAR: 'foo'
+  MY_ENV_VAR: foo
 
 jobs:
   what-works:
