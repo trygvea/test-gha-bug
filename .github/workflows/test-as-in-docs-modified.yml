@@ -12,10 +12,8 @@ env:
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
-    env:
-      Greeting: Hello
     steps:
       - name: "Say Hello Mona it's Monday"
         if: env.DAY_OF_WEEK == 'Monday'
-        run: echo "$Greeting no-name. Today is whatever"
+        run: echo "no-greeting no-name. Today is whatever"
 
